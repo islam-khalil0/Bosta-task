@@ -20,7 +20,7 @@ function App() {
     return (
       <div className="p-4 flex items-center flex-col gap-6 justify-center min-h-[100vh]">
         <Form />
-        <h1 className="text-2xl text-gray-400">
+        <h1 className="text-2xl text-gray-400 text-center max-md:text-xl">
           ما من شئ لعرضه, ادخل رقم شحنتك
         </h1>
       </div>

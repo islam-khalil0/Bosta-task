@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { useTrackingContext } from "../Context/TrackingContext";
 
 const Form = () => {
-  const { fetchShipmentTrackingInfo, trackingInfo } = useTrackingContext();
+  const { fetchShipmentTrackingInfo } = useTrackingContext();
   const [trackingNumber, setTrackingNumber] = useState("");
 
   const handleFetchTrackingInfo = async (event) => {
     event.preventDefault();
     if (trackingNumber.trim() !== "") {
       await fetchShipmentTrackingInfo(trackingNumber);
-      console.log(trackingInfo);
     }
   };
 
@@ -24,7 +23,7 @@ const Form = () => {
       />
       <button
         type="submit"
-        className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
+        className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600 max-md:p-2"
       >
         تتبع شحنتك
       </button>
